@@ -7,6 +7,7 @@ public class MusicPlayerScript : MonoBehaviour {
     // Use this for initialization
     static MusicPlayerScript instance = null;
 	void Start () {
+        
         if (instance == null)
         {
             instance = this;
