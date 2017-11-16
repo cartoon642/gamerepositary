@@ -19,5 +19,9 @@ public class LevelManager : MonoBehaviour {
         SceneManager.LoadScene(x);
         
     }
-    
+    public void Quit()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
+    }
+
 }
