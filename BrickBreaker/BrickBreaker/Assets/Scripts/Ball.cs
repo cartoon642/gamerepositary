@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(AudioSource))]
 public class Ball : MonoBehaviour {
-    int count = 0;
-    public Paddle paddle;
-    Vector3 ballpaddledifference;
     
+    int count = 0;
+    Paddle paddle;
+    Vector3 ballpaddledifference;
+    AudioSource audio;
     
 	void Start () {
+        paddle = GameObject.FindObjectOfType<Paddle>();
         ballpaddledifference = this.transform.position - paddle.transform.position;
+        audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -31,5 +34,10 @@ public class Ball : MonoBehaviour {
             this.transform.position = paddle.transform.position + ballpaddledifference;
             
         }
+      
+}
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        audio.Play();
     }
 }

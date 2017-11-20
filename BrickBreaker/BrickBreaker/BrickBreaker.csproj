@@ -99,6 +99,7 @@
     <Compile Include="Assets\Scripts\Lose.cs" />
     <Compile Include="Assets\Scripts\MusicPlayerScript.cs" />
     <Compile Include="Assets\Scripts\Paddle.cs" />
+    <Compile Include="Assets\win.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
